@@ -28,7 +28,7 @@ class singupActivity : AppCompatActivity(){
     }
 
     private fun signUp(){
-        val email = editext_email.text.toString()
+        val email = edittext_email.text.toString()
         val username = edittext_username.text.toString()
         val password = edittext_password.text.toString()
 
@@ -44,9 +44,8 @@ class singupActivity : AppCompatActivity(){
                 Log.d("Main", "Success: ${it.result?.user?.uid}")
             }
             .addOnFailureListener {
-                Log.d("Main","Failed to Create: ${it.message}")
+                Log.d("Main","Failed to Creat: ${it.message}")
                 Toast.makeText(this, "Failed to Create User: ${it.message}", Toast.LENGTH_SHORT).show()
             }
-
     }
 }
