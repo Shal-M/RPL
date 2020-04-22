@@ -1,51 +1,81 @@
 package com.example.petsociety
 
-import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
-import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_signup.*
-import kotlinx.android.synthetic.main.activity_signup.edittext_password
-import kotlinx.android.synthetic.main.activity_signup.edittext_username
+import com.android.volley.AuthFailureError
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONException
+import org.json.JSONObject
+import java.util.*
 
-class singupActivity : AppCompatActivity(){
+class signupActivity : AppCompatActivity(){
+    private lateinit var username: EditText
+    private lateinit var email: EditText
+    private lateinit var password: EditText
+    private lateinit var loading: ProgressBar
+    private lateinit var btnSignUp: Button
+    val URL_REGIST = "https://d728b975.ngrok.io/android_register_login/register.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        btn_signup.setOnClickListener {
-            signUp()
+        username = findViewById(R.id.edittext_username)
+        email = findViewById(R.id.edittext_email)
+        password = findViewById(R.id.edittext_password)
+        loading = findViewById(R.id.loading)
+        btnSignUp = findViewById(R.id.btn_signup)
+
+        btnSignUp.setOnClickListener {
+            SignUp()
         }
     }
 
-    private fun signUp(){
-        val email = edittext_email.text.toString()
-        val username = edittext_username.text.toString()
-        val password = edittext_password.text.toString()
+    private fun SignUp(){
+        loading.visibility = View.VISIBLE
+        btnSignUp.visibility = View.GONE
 
-        if (email.isEmpty() || username.isEmpty() || password.isEmpty()){
-            Toast.makeText(this,"Please Enter text",Toast.LENGTH_SHORT).show()
-            return
-        }
+        val username = this.username.text.toString().trim()
+        val email = this.email.text.toString().trim()
+        val password = this.password.text.toString().trim()
 
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password)
-            .addOnCompleteListener{
-                if(!it.isSuccessful) return@addOnCompleteListener
-
-                Log.d("Main", "Success: ${it.result?.user?.uid}")
+        val stringRequest: StringRequest = object : StringRequest(Method.POST, URL_REGIST,
+                Response.Listener { response ->
+                    try {
+                        val jsonObject = JSONObject(response)
+                        val success = jsonObject.getString("success")
+                        if (success == "1") {
+                            Toast.makeText(this, "Register Success!", Toast.LENGTH_SHORT).show()
+                        }
+                    } catch (e: JSONException) {
+                        e.printStackTrace()
+                        Toast.makeText(this,"Register Error! $e",Toast.LENGTH_SHORT).show()
+                        loading.visibility = View.GONE
+                        btnSignUp.setVisibility(View.VISIBLE)
+                    }
+                },
+                Response.ErrorListener { error ->
+                    Toast.makeText(this,"Register Error! $error",Toast.LENGTH_SHORT).show()
+                    loading.visibility = View.GONE
+                    btnSignUp.setVisibility(View.VISIBLE)
+                }) {
+                @Throws(AuthFailureError::class)
+                override fun getParams(): Map<String, String> {
+                    val params: MutableMap<String, String> = HashMap()
+                    params["name"] = username
+                    params["email"] = email
+                    params["password"] = password
+                    return params
+                }
             }
-            .addOnFailureListener {
-                Log.d("Main","Failed to Creat: ${it.message}")
-                Toast.makeText(this, "Failed to Create User: ${it.message}", Toast.LENGTH_SHORT).show()
-            }
+        val requestQueue = Volley.newRequestQueue(this)
+        requestQueue.add(stringRequest)
     }
 }

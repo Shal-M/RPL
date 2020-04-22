@@ -55,6 +55,12 @@
         android:backgroundTint="#FABEBE"
         android:inputType="textPassword"
         />
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/btn_signup"
         android:layout_width="121dp"
