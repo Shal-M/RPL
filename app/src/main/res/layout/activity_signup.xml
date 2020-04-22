@@ -14,7 +14,7 @@
         android:textSize="36sp"
         android:textColor="#FABEBE"
         android:layout_gravity="center"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="150dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:textSize="12sp"
         android:textStyle="bold"
         android:textColor="#C4C4C4"/>
-    
+
     <EditText
         android:id="@+id/edittext_username"
         android:layout_width="261dp"
@@ -36,7 +36,7 @@
         android:layout_marginTop="20dp"
         />
     <EditText
-        android:id="@+id/editext_email"
+        android:id="@+id/edittext_email"
         android:layout_width="261dp"
         android:layout_height="wrap_content"
         android:hint="@string/email"

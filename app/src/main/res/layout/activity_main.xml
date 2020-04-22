@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".MainActivity"
     android:background="#FFB6B9">
 
     <TextView
@@ -16,7 +16,7 @@
         android:textSize="36sp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="150dp"
         tools:ignore="MissingConstraints" />
     <TextView
         android:id="@+id/tv_continue"
@@ -28,7 +28,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="30dp"/>
-    
+
     <EditText
         android:id="@+id/edittext_email"
         android:layout_width="261dp"
@@ -81,14 +81,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         >
-    <TextView
-        android:id="@+id/tv_signup"
-        android:text="@string/not_a_member_yet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        />
+        <TextView
+            android:id="@+id/tv_signup"
+            android:text="@string/not_a_member_yet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            />
 
     </LinearLayout>
 </RelativeLayout>
