@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="#FFB6B9">
-
+    <!-- margintop habis d benerin -->
     <TextView
         android:id="@+id/tv_login"
         android:layout_width="wrap_content"
