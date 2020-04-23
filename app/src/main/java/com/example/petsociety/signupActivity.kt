@@ -23,6 +23,7 @@ class signupActivity : AppCompatActivity(){
     private lateinit var btnSignUp: Button
     val URL_REGIST = "https://d728b975.ngrok.io/android_register_login/register.php"
 
+    // tes comment doang hapus aja nanti
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)

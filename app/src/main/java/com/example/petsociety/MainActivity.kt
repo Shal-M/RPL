@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var loading: ProgressBar
     private lateinit var btnLogin: Button
 
-    val URL_Login = "https://d728b975.ngrok.io/android_register_login/login.php"
+    val URL_Login = "https://65a32f35.ngrok.io/android_register_login/login.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
