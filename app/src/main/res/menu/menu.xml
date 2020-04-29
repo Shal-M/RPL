@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/adopsi"
+        android:title="Adopsi"
+        android:icon="@drawable/logo_adopsi"/>
+    <item
+        android:id="@+id/gal_dana"
+        android:title="Galang Dana"
+        android:icon="@drawable/galang"/>
+    <item
+        android:id="@+id/inbox"
+        android:title="Inbox"
+        android:icon="@drawable/inbox"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/akun"/>
+</menu>

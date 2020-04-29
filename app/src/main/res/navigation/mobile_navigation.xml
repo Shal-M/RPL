@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:label="Home"
+        android:name="com.example.petsociety.HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/adopsi"
+        android:name="com.example.petsociety.AdopsiFragment"
+        android:label="Adopsi"
+        tools:layout="@layout/fragment_adopsi"/>
+    <fragment
+        android:id="@+id/gal_dana"
+        android:name="com.example.petsociety.GalangDanaFragment"
+        android:label="Galang Dana"
+        tools:layout="@layout/fragment_galang_dana"/>
+    <fragment
+        android:id="@+id/inbox"
+        android:name="com.example.petsociety.InboxFragment"
+        android:label="Inbox"
+        tools:layout="@layout/fragment_inbox"/>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.petsociety.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"/>
+
+</navigation>
