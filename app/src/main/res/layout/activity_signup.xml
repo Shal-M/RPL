@@ -79,7 +79,7 @@
         android:layout_width="900dp"
         android:layout_height="300dp"
         android:layout_marginStart="-240dp"
-        android:layout_marginTop="-70dp"
+        android:layout_marginTop="-100dp"
         app:srcCompat="@drawable/cat" />
 
 </LinearLayout>
