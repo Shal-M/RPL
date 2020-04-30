@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var loading: ProgressBar
     private lateinit var btnLogin: Button
 
-    val URL_Login = "https://65a32f35.ngrok.io/android_register_login/login.php"
+    val URL_Login = "https://f47d717e.ngrok.io/android_register_login/login.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,15 +41,15 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val mEmail = this.email.text.toString().trim()
             val mPass = this.password.text.toString().trim()
-            val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
-            startActivity(MoveLogin)
+            //val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
+            //startActivity(MoveLogin)
 
-            //if (!mEmail.isEmpty() || !mPass.isEmpty()) {
-                //login(mEmail, mPass)
-            //} else {
-              //  email.error = "Please Insert Email"
-               // password.error = "Please Insert Password"
-           // }
+            if (!mEmail.isEmpty() && !mPass.isEmpty()) {
+                login(mEmail, mPass)
+            } else {
+                if(mEmail.isEmpty()) email.error = "Please Insert Email"
+                if(mPass.isEmpty()) password.error = "Please Insert Password"
+            }
         }
     }
 
@@ -68,6 +68,8 @@ class MainActivity : AppCompatActivity() {
                             val `object` = jsonArray.getJSONObject(i)
                             val name = `object`.getString("name").trim()
                             val email = `object`.getString("email").trim()
+                            val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
+                            startActivity(MoveLogin)
                             Toast.makeText(this, "Success Login. \nYour Name : $name\nYour Email : $email", Toast.LENGTH_SHORT).show()
                             loading.visibility = View.GONE
                         }

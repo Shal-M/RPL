@@ -11,4 +11,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="already_to_have_an_account">already to have an account?</string>
+    <string name="home">Home</string>
+    <string name="adopsi">Adopsi</string>
+    <string name="galang_dana">Galang Dana</string>
+    <string name="inbox">Inbox</string>
+    <string name="profile">Profile</string>
 </resources>

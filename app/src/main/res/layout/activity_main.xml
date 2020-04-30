@@ -17,7 +17,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="50dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        />
     <TextView
         android:id="@+id/tv_continue"
         android:layout_width="wrap_content"
@@ -28,57 +29,74 @@
         android:layout_centerHorizontal="true"
         android:textColor="#FFFFFF"/>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_email"
+        android:layout_below="@id/tv_continue"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/email"
+        android:textColorHint="#FFFFFF"
+        >
+
     <EditText
         android:id="@+id/edittext_email"
         android:layout_width="261dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_continue"
-        android:hint="@string/email"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:backgroundTint="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        />
 
-    <EditText
-        android:id="@+id/edittext_password"
-        android:layout_width="261dp"
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edittext_email"
-        android:hint="@string/password"
+        android:layout_below="@id/layout_email"
         android:layout_centerHorizontal="true"
-        android:backgroundTint="#FFFFFF"
+        android:id="@+id/layout_pass"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#FFFFFF"
+        android:hint="@string/password"
         android:textColorHint="#FFFFFF"
-        android:inputType="textPassword"/>
+        >
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="#FFFFFF"
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
         android:id="@+id/loading"
         android:layout_marginTop="35dp"
-        android:layout_below="@id/edittext_password"
+        android:layout_below="@id/layout_pass"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edittext_password"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/layout_pass"
         android:layout_centerHorizontal="true"
-        android:background="#FFFFFF"
+        android:background="@drawable/rounded_button_white"
         android:text="@string/login"
         android:textColor="#FFB6B9"
         android:textSize="24sp"
-        android:layout_marginTop="6dp"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/btn_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        >
+        android:layout_marginTop="6dp"
+        />
 
         <TextView
             android:id="@+id/tv_signup"
@@ -87,14 +105,18 @@
             android:text="@string/not_a_member_yet"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
-            android:layout_marginLeft="125dp"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
             />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="900dp"
-            android:layout_height="300dp"
-            android:layout_marginLeft="-540dp"
-            app:srcCompat="@drawable/cat" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/cat"
+            android:layout_below="@+id/tv_signup"
+            android:scaleX="1.21"
+            android:scaleType="fitEnd"
+            />
 
-    </LinearLayout>
 </RelativeLayout>

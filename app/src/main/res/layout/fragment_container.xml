@@ -13,7 +13,10 @@
         android:id="@+id/nav_view"
         app:menu="@menu/menu"
         android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"/>
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="#9C393D"
+        app:itemTextColor="#9C393D"
+        />
     <fragment
         android:id="@+id/nav_host_fragment"
         android:layout_width="match_parent"
