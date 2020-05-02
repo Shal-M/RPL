@@ -3,11 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ProfileFragment">
-android:orientation="vertical"
-tools:context=".ProfileFragment">
+    tools:context=".ProfileFragment"
+    android:orientation="vertical">
 
 <!-- TODO: Update blank fragment layout -->
 <Button
@@ -73,12 +71,6 @@ tools:context=".ProfileFragment">
         android:textColor="#000000"
         android:gravity="center_vertical"/>
 </LinearLayout>
-
-=======
-
->>>>>>> 253c4d620375252eac453881203ba0ac55e595e9
-
-
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="297dp"
