@@ -69,6 +69,8 @@ class MainActivity : AppCompatActivity() {
                             val name = `object`.getString("name").trim()
                             val email = `object`.getString("email").trim()
                             val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
+                            MoveLogin.putExtra("name", name)
+                            MoveLogin.putExtra("email", email)
                             startActivity(MoveLogin)
                             Toast.makeText(this, "Success Login. \nYour Name : $name\nYour Email : $email", Toast.LENGTH_SHORT).show()
                             loading.visibility = View.GONE

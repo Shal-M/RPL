@@ -17,4 +17,7 @@
     <string name="galang_dana">Galang Dana</string>
     <string name="inbox">Inbox</string>
     <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="bantuan">Bantuan</string>
+    <string name="log_out">Log Out</string>
 </resources>
