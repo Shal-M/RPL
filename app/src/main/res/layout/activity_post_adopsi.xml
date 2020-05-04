@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostAdopsiActivity"
+    android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:title=" ">
+
+        <ImageButton
+            android:id="@+id/arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="24dp"
+            android:tint="@android:color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Post"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/img_post_adopsi"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:id="@+id/tv_change_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Photo"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Hewan"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="text"
+                android:gravity="left"
+                android:autofillHints="Jenis Hewan"
+                android:background="@drawable/txt_bg"
+                android:padding="8dp"
+                android:textSize="15sp"
+                android:hint="Jenis Hewan"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelamin"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:inputType="text"
+                android:autofillHints="Jenis kelamin : jantan/betina"
+                android:gravity="left"
+                android:background="@drawable/txt_bg"
+                android:padding="8dp"
+                android:textSize="15sp"
+                android:hint="Jenis Kelamin"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="1dp"
+                android:inputType="textMultiLine"
+                android:gravity="left"
+                android:background="@drawable/txt_bg"
+                android:padding="8dp"
+                android:textSize="15sp"
+                android:hint="Deskripsi"/>
+            <Button
+                android:id="@+id/btn_post_adopsi"
+                android:layout_width="340dp"
+                android:layout_height="39dp"
+                android:background="@drawable/rounded_btn_red"
+                android:text="Post"
+                android:textColor="#FFFF"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

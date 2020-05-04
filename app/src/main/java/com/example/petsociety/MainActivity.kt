@@ -41,11 +41,11 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val mEmail = this.email.text.toString().trim()
             val mPass = this.password.text.toString().trim()
-            //val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
-            //startActivity(MoveLogin)
+            val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
+            startActivity(MoveLogin)
 
             if (!mEmail.isEmpty() && !mPass.isEmpty()) {
-                login(mEmail, mPass)
+                //login(mEmail, mPass)
             } else {
                 if(mEmail.isEmpty()) email.error = "Please Insert Email"
                 if(mPass.isEmpty()) password.error = "Please Insert Password"
