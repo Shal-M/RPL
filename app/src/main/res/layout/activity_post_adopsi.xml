@@ -45,23 +45,25 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:id="@+id/img_post_adopsi"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:scaleType="center"/>
             <TextView
                 android:id="@+id/tv_change_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add Photo"
+                android:text="@string/add_photo"
                 android:gravity="center_horizontal"
                 android:textColor="@android:color/black"
                 android:layout_marginBottom="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jenis Hewan"
+                android:text="@string/jenis_hewan"
                 android:textSize="15sp"
                 android:textColor="@android:color/black"
                 android:layout_marginBottom="6dp"/>
             <EditText
+                android:id="@+id/et_hewan"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="text"
@@ -70,16 +72,17 @@
                 android:background="@drawable/txt_bg"
                 android:padding="8dp"
                 android:textSize="15sp"
-                android:hint="Jenis Hewan"/>
+                android:hint="@string/jenis_hewan"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jenis Kelamin"
+                android:text="@string/jenis_kelamin"
                 android:textSize="15sp"
                 android:textColor="@android:color/black"
                 android:layout_marginBottom="6dp"
                 android:layout_marginTop="5dp"/>
             <EditText
+                android:id="@+id/et_kelamin"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="1dp"
@@ -89,16 +92,17 @@
                 android:background="@drawable/txt_bg"
                 android:padding="8dp"
                 android:textSize="15sp"
-                android:hint="Jenis Kelamin"/>
+                android:hint="@string/jenis_kelamin"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deskripsi"
+                android:text="@string/deskripsi"
                 android:textSize="15sp"
                 android:textColor="@android:color/black"
                 android:layout_marginBottom="6dp"
                 android:layout_marginTop="5dp"/>
             <EditText
+                android:id="@+id/et_deskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
                 android:layout_marginTop="1dp"
@@ -107,13 +111,13 @@
                 android:background="@drawable/txt_bg"
                 android:padding="8dp"
                 android:textSize="15sp"
-                android:hint="Deskripsi"/>
+                android:hint="@string/deskripsi"/>
             <Button
                 android:id="@+id/btn_post_adopsi"
                 android:layout_width="340dp"
                 android:layout_height="39dp"
                 android:background="@drawable/rounded_btn_red"
-                android:text="Post"
+                android:text="@string/post"
                 android:textColor="#FFFF"
                 android:layout_gravity="center"
                 android:textSize="24sp"

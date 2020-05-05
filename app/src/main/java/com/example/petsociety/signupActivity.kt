@@ -23,7 +23,7 @@ class signupActivity : AppCompatActivity(){
     private lateinit var password: EditText
     private lateinit var loading: ProgressBar
     private lateinit var btnSignUp: Button
-    val URL_REGIST = "https://f47d717e.ngrok.io/android_register_login/register.php"
+    val URL_REGIST = "https://eeec719e.ngrok.io/android_register_login/register.php"
 
     // tes comment doang hapus aja nanti
     override fun onCreate(savedInstanceState: Bundle?) {

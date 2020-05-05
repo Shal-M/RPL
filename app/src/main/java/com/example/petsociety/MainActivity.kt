@@ -1,8 +1,8 @@
 package com.example.petsociety
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +14,7 @@ import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
 
+
 class MainActivity : AppCompatActivity() {
     private lateinit var signUp: TextView
     private lateinit var email: EditText
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var loading: ProgressBar
     private lateinit var btnLogin: Button
 
-    val URL_Login = "https://f47d717e.ngrok.io/android_register_login/login.php"
+    val URL_Login = "https://eeec719e.ngrok.io/android_register_login/login.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,11 +42,11 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val mEmail = this.email.text.toString().trim()
             val mPass = this.password.text.toString().trim()
-            val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
-            startActivity(MoveLogin)
+            //val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
+            //startActivity(MoveLogin)
 
             if (!mEmail.isEmpty() && !mPass.isEmpty()) {
-                //login(mEmail, mPass)
+                login(mEmail, mPass)
             } else {
                 if(mEmail.isEmpty()) email.error = "Please Insert Email"
                 if(mPass.isEmpty()) password.error = "Please Insert Password"
@@ -66,11 +67,15 @@ class MainActivity : AppCompatActivity() {
                     if (success == "1") {
                         for (i in 0 until jsonArray.length()) {
                             val `object` = jsonArray.getJSONObject(i)
+                            //val user: JSONObject = jsonObject.getJSONObject("user")
+                            val userPref = getSharedPreferences("user", Context.MODE_PRIVATE)
+                            val editor = userPref.edit()
                             val name = `object`.getString("name").trim()
                             val email = `object`.getString("email").trim()
+                            editor.putString("name", name)
+                            editor.putString("email", email)
+                            editor.apply()
                             val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
-                            MoveLogin.putExtra("name", name)
-                            MoveLogin.putExtra("email", email)
                             startActivity(MoveLogin)
                             Toast.makeText(this, "Success Login. \nYour Name : $name\nYour Email : $email", Toast.LENGTH_SHORT).show()
                             loading.visibility = View.GONE
@@ -99,5 +104,4 @@ class MainActivity : AppCompatActivity() {
         val requestQueue = Volley.newRequestQueue(this)
         requestQueue.add(stringRequest)
     }
-
 }

@@ -23,4 +23,9 @@
     <string name="header_home">Ingin melakukan kebaikan apa hari ini?</string>
     <string name="btn_galdana_home">Galang Dana</string>
     <string name="btn_buka_adopsi">Buka Adopsi</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="jenis_hewan">Jenis Hewan</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="post">Post</string>
 </resources>
