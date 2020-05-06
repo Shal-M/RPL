@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Base64
@@ -16,18 +17,20 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.util.*
 
+
 class PostAdopsiActivity() : AppCompatActivity() {
     var bitmap: Bitmap? = null
-    var check: Boolean = true
-    val URL_ADOPSI = "https://eeec719e.ngrok.io/android_register_login/uploadAdopt.php"
+    val URL_ADOPSI = "https://c4c0c92d.ngrok.io/android_register_login/uploadAdopt.php"
     private lateinit var imageView: ImageView
     private lateinit var mHewan: EditText
     private lateinit var mKelamin: EditText
     private lateinit var mDeskripsi: EditText
+    private lateinit var decoded: Bitmap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,13 +54,11 @@ class PostAdopsiActivity() : AppCompatActivity() {
         }
     }
 
-    private fun Upload(): String {
-        var byteArrayOutputStreamObject: ByteArrayOutputStream
-        byteArrayOutputStreamObject = ByteArrayOutputStream()
-        bitmap?.compress(Bitmap.CompressFormat.JPEG,100, byteArrayOutputStreamObject)
-        val byteArrayVar = ByteArrayOutputStream().toByteArray()
-        val convertImage = Base64.encodeToString(byteArrayVar,Base64.DEFAULT)
-        return convertImage
+    private fun Upload(bmp: Bitmap): Any {
+        val baos = ByteArrayOutputStream()
+        bmp.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+        val imageBytes = baos.toByteArray()
+        return Base64.encodeToString(imageBytes, Base64.DEFAULT)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -65,12 +66,37 @@ class PostAdopsiActivity() : AppCompatActivity() {
         if (requestCode == 1 && resultCode == Activity.RESULT_OK && data != null && data.data != null) {
             val filePath = data.data
             try {
-                bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filePath)
+                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, filePath)
                 imageView.setImageBitmap(bitmap)
+                // 512 adalah resolusi tertinggi setelah image di resize, bisa di ganti.
+                getResizedBitmap(bitmap,512)?.let { setToImageView(it) }
             } catch (e: IOException){
                 e.printStackTrace()
             }
         }
+    }
+
+    private fun setToImageView(bmp: Bitmap) {
+        //compress image
+        val bytes = ByteArrayOutputStream()
+        bmp.compress(Bitmap.CompressFormat.JPEG, 60, bytes)
+        decoded = BitmapFactory.decodeStream(ByteArrayInputStream(bytes.toByteArray()))
+
+        //menampilkan gambar yang dipilih dari camera/gallery ke ImageView
+        imageView.setImageBitmap(decoded)
+    }
+    fun getResizedBitmap(image: Bitmap, maxSize: Int): Bitmap? {
+        var width = image.width
+        var height = image.height
+        val bitmapRatio = width.toFloat() / height.toFloat()
+        if (bitmapRatio > 1) {
+            width = maxSize
+            height = (width / bitmapRatio).toInt()
+        } else {
+            height = maxSize
+            width = (height * bitmapRatio).toInt()
+        }
+        return Bitmap.createScaledBitmap(image, width, height, true)
     }
 
     private fun UploadPicture() {
@@ -108,7 +134,7 @@ class PostAdopsiActivity() : AppCompatActivity() {
                 params["jhewan"] = GetHewan
                 params["jkelamin"] = GetKelamin
                 params["deskripsi"] = GetDesc
-                params["image_hewan"] = Upload()
+                params["image_hewan"] = Upload(decoded) as String
                 return params
             }
         }
