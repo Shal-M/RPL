@@ -1,9 +1,8 @@
 package com.example.petsociety
 
 import android.content.Context
-import android.content.SharedPreferences
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,5 +40,17 @@ class ProfileFragment : Fragment() {
         email.setText(sharedPreferences?.getString("email",""))
 
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btnEditProfil = view.findViewById<Button>(R.id.btn_editProfile)
+
+        btnEditProfil.setOnClickListener {
+            activity?.let {
+                val moveEditProfil = Intent(it, EditProfilActivity::class.java)
+                it.startActivity(moveEditProfil)
+            }
+        }
     }
 }

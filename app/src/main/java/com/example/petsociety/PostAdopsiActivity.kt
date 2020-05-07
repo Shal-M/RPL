@@ -42,6 +42,7 @@ class PostAdopsiActivity() : AppCompatActivity() {
         mKelamin = findViewById(R.id.et_kelamin)
         mDeskripsi = findViewById(R.id.et_deskripsi)
         var post = findViewById<Button>(R.id.btn_post_adopsi)
+        var arrowBack = findViewById<ImageButton>(R.id.arrow_back)
 
         addPhoto.setOnClickListener {
             val intent = Intent()
@@ -51,6 +52,10 @@ class PostAdopsiActivity() : AppCompatActivity() {
         }
         post.setOnClickListener {
             UploadPicture()
+        }
+        arrowBack.setOnClickListener {
+            val moveBack = Intent(this, ControllerFragment::class.java)
+            startActivity(moveBack)
         }
     }
 

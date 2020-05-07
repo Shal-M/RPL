@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PostDonasiActivity">
-
+    android:layout_height="match_parent"
+    tools:context=".EditProfilActivity">
     <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Post"
+            android:text="Edit Profil"
             android:textColor="@android:color/black"
             android:textSize="18sp"/>
 
@@ -33,82 +32,101 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_marginTop="6dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:id="@+id/img_post_adopsi"
-                android:layout_marginBottom="16dp"/>
+            android:layout_marginTop="10dp"
+            android:padding="10dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_person_black_24dp"
+                android:layout_gravity="center_horizontal"/>
             <TextView
-                android:id="@+id/tv_change_photo"
-                android:layout_width="match_parent"
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Photo"
-                android:gravity="center_horizontal"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="20dp"/>
+                android:layout_gravity="center_horizontal"
+                android:text="@string/email"
+                android:textSize="15sp"
+                android:textColor="#000000"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
+                android:text="Nama Lengkap"
                 android:layout_marginStart="10dp"
-                android:text="Judul Donasi"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
-
+                android:layout_marginBottom="6dp"/>
             <EditText
-                android:id="@+id/et_judul"
+                android:id="@+id/et_namalengkap"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:gravity="left"
-                android:autofillHints="Judul Donasi"
+                android:autofillHints="Judul Post"
                 android:background="@drawable/txt_bg"
                 android:padding="8dp"
                 android:textSize="15sp"
-                android:hint="Judul Donasi"/>
-
+                android:hint="Your Name"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deskripsi"
-                android:textSize="15sp"
+                android:text="Nomor Handphone"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
                 android:textColor="@android:color/black"
-                android:layout_marginBottom="6dp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginBottom="6dp"/>
             <EditText
-                android:id="@+id/et_deskripsi"
+                android:id="@+id/et_no_hp"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:layout_marginTop="1dp"
-                android:inputType="textMultiLine"
+                android:layout_height="50dp"
+                android:inputType="text"
                 android:gravity="left"
+                android:autofillHints="Judul Post"
                 android:background="@drawable/txt_bg"
                 android:padding="8dp"
                 android:textSize="15sp"
-                android:hint="Deskripsi"/>
+                android:hint="Your Phone"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/et_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:inputType="textMultiLine"
+                android:gravity="left"
+                android:autofillHints="Judul Post"
+                android:background="@drawable/txt_bg"
+                android:padding="8dp"
+                android:textSize="15sp"
+                android:hint="Your Address"/>
             <Button
-                android:id="@+id/btn_post_adopsi"
+                android:id="@+id/btn_update_profil"
                 android:layout_width="340dp"
                 android:layout_height="39dp"
                 android:background="@drawable/rounded_btn_red"
-                android:text="Post"
+                android:text="Update"
                 android:textColor="#FFFF"
                 android:layout_gravity="center"
                 android:textSize="24sp"
                 android:layout_marginTop="10dp"
                 />
+
         </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>
