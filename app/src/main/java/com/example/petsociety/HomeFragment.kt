@@ -2,22 +2,35 @@ package com.example.petsociety
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
+import com.synnapps.carouselview.CarouselView
+import com.synnapps.carouselview.ImageListener
+import kotlinx.android.synthetic.main.fragment_home.*
+
 
 /**
  * A simple [Fragment] subclass.
  */
 class HomeFragment : Fragment() {
+    private var carouselView: CarouselView? = null
+    val sampleimg = intArrayOf(R.drawable.tes1,R.drawable.tes2,R.drawable.tes3)
+    val imglistener = ImageListener { position, imageView ->
+        imageView.setImageResource(sampleimg[position])
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
+
     ): View? {
-        // Inflate the layout for this fragment
+        carouselView = view?.findViewById(R.id.carousel_vhome)
+        carouselView?.pageCount = sampleimg.size
+        carouselView?.setImageListener(imglistener)
         return inflater.inflate(R.layout.fragment_home, container, false)
 
     }
