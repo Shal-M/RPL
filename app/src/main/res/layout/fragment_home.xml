@@ -11,7 +11,8 @@
         android:id="@+id/carousel_vhome"
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        app:fillColor="#B14B4B">
+        app:fillColor="#B14B4B"
+        app:strokeColor="@android:color/white">
 
     </com.synnapps.carouselview.CarouselView>
 

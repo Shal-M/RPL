@@ -13,6 +13,7 @@ import android.util.Base64.DEFAULT
 import android.util.Base64.encodeToString
 import android.util.Log
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import com.android.volley.AuthFailureError
@@ -41,6 +42,7 @@ class PostDonasiActivity : AppCompatActivity() {
         imageView = findViewById(R.id.img_post_adopsi)
         mJudul = findViewById(R.id.et_judul)
         mDeskripsi = findViewById(R.id.et_deskripsi)
+        var arrowBack = findViewById<ImageButton>(R.id.arrow_back)
 
         tv_change_photo.setOnClickListener {
             val intent = Intent()
@@ -51,6 +53,10 @@ class PostDonasiActivity : AppCompatActivity() {
 
         btn_post_adopsi.setOnClickListener {
             UploadPicture()
+        }
+        arrowBack.setOnClickListener {
+            val moveBack = Intent(this, ControllerFragment::class.java)
+            startActivity(moveBack)
         }
     }
 
