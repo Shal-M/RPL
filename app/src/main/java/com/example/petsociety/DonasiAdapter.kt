@@ -1,6 +1,7 @@
 package com.example.petsociety
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +16,7 @@ class DonasiAdapter(private val context: Context, private val listDonasi:ArrayLi
         var tvJudul: TextView = itemView.findViewById(R.id.tv_item_galdana)
         var tvDeskripsi : TextView = itemView.findViewById(R.id.tv_item_username)
         var img: ImageView = itemView.findViewById(R.id.img_item_galdana)
+        //var rv: RecyclerView = itemView.findViewById(R.id.rv_galdana)
     }
 
 
@@ -36,5 +38,13 @@ class DonasiAdapter(private val context: Context, private val listDonasi:ArrayLi
 
         holder.tvJudul.text = donasi.judul
         holder.tvDeskripsi.text = donasi.desc
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, detailDonasi::class.java)
+            intent.putExtra(detailDonasi.EXTRA_JUDUL, donasi.judul)
+            //intent.putExtra(detailDonasi.EXTRA_DESC, donasi.desc)
+            intent.putExtra(detailDonasi.EXTRA_PHOTO, donasi.photo)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 }

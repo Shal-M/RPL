@@ -28,4 +28,5 @@
     <string name="jenis_kelamin">Jenis Kelamin</string>
     <string name="deskripsi">Deskripsi</string>
     <string name="post">Post</string>
+    <string name="judul">Judul</string>
 </resources>

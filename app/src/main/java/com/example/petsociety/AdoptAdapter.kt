@@ -38,5 +38,6 @@ class AdoptAdapter(private val context: Context, private val listAdopt: ArrayLis
         holder.tvHewan.text = adopt.jhewan
         holder.tvKel.text = adopt.jkelamin
         holder.tvDesc.text = adopt.deskripsi
+
     }
 }

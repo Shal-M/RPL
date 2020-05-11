@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditProfilActivity"/>
+        <activity android:name=".detailDonasi"></activity>
+        <activity android:name=".EditProfilActivity" />
         <activity android:name=".PostDonasiActivity" />
         <activity android:name=".PostAdopsiActivity" />
         <activity android:name=".MainActivity">
@@ -31,7 +32,7 @@
             android:name=".signupActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".ControllerFragment" />
-        <activity android:name=".ProfileFragment"/>
+        <activity android:name=".ProfileFragment" />
     </application>
 
 </manifest>
