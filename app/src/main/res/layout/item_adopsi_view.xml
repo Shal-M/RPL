@@ -12,58 +12,69 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="175dp">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
 
-        <ImageView
-            android:id="@+id/img_item_adopsi"
-            android:layout_width="170dp"
-            android:padding="6dp"
-            android:layout_height="match_parent"
-            android:scaleType="fitStart"
-            android:src="@color/colorAccent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_item_adopsi"
-            android:text="Tittle Post"
-            android:textColor="#262626"
-            android:layout_toRightOf="@id/img_item_adopsi"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv_item_username"
-            android:text="Username"
-            android:textSize="18sp"
-            android:layout_toRightOf="@id/img_item_adopsi"
-            android:textColor="#FA1010"
-            android:layout_below="@id/tv_item_adopsi" />
-        <TextView
-            android:id="@+id/tv_desk_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_item_username"
-            android:elegantTextHeight="true"
-            android:text="Deskripsi"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="18sp"
-            android:layout_toRightOf="@id/img_item_adopsi"
-            android:layout_marginTop="20dp" />
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:background="@drawable/rounded_btn_red"
-            android:text="Detail"
-            android:textColor="#FFFF"
-            android:layout_below="@id/tv_desk_item"
-            android:layout_toEndOf="@id/tv_desk_item"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="30dp"/>
+            <ImageView
+                android:id="@+id/img_item_adopsi"
+                android:layout_width="170dp"
+                android:padding="6dp"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/cat2" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_item_adopsi"
+                android:text="Cherry, si gendut"
+                android:textColor="#262626"
+                android:layout_toRightOf="@id/img_item_adopsi"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_item_username"
+                android:text="Irsyadime"
+                android:textSize="18sp"
+                android:layout_toRightOf="@id/img_item_adopsi"
+                android:textColor="#FA1010"
+                android:layout_below="@id/tv_item_adopsi" />
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tv_desk_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_item_username"
+                android:elegantTextHeight="true"
+                android:text="Deskripsi"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                android:layout_toRightOf="@id/img_item_adopsi"
+                android:layout_marginTop="20dp" />
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_btn_red"
+                android:text="Detail"
+                android:textColor="#FFFF"
+                android:layout_below="@id/tv_desk_item"
+                android:layout_toEndOf="@id/tv_desk_item"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="30dp"/>
+
+        </RelativeLayout>
+
 
     </RelativeLayout>
-
 
 </androidx.cardview.widget.CardView>
