@@ -45,14 +45,27 @@
             android:textSize="40sp"
             android:textStyle="bold" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/img_item_galdana"
-            android:layout_below="@id/tv_item_username"
-            android:layout_marginTop="10dp"/>
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/jenis_hewan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Kucing"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/jenis_kelamin_hewan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="(Betina)"
+                android:textSize="20sp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -68,7 +81,7 @@
             android:layout_height="39dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/rounded_btn_red"
-            android:text="Donasi Sekarang"
+            android:text="Adopsi Sekarang"
             android:layout_marginTop="138dp"
             android:textColor="#FFFF"
             android:textSize="24sp" />
