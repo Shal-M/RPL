@@ -1,6 +1,7 @@
 package com.example.petsociety
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.view.menu.ActionMenuItemView
@@ -17,6 +18,7 @@ class AdoptAdapter(private val context: Context, private val listAdopt: ArrayLis
         var tvKel = itemView.findViewById<TextView>(R.id.tv_item_username)
         var tvDesc = itemView.findViewById<TextView>(R.id.tv_desk_item)
         var img = itemView.findViewById<ImageView>(R.id.img_item_adopsi)
+        var tvjudul = itemView.findViewById<TextView>(R.id.et_judul)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdoptAdapter.AdoptViewHolder {
@@ -35,9 +37,19 @@ class AdoptAdapter(private val context: Context, private val listAdopt: ArrayLis
             .load(adopt.img)
             .into(holder.img)
 
+        holder.tvjudul.text = adopt.judul
         holder.tvHewan.text = adopt.jhewan
         holder.tvKel.text = adopt.jkelamin
         holder.tvDesc.text = adopt.deskripsi
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, DetailAdopsi::class.java)
+            intent.putExtra(DetailAdopsi.EXTRA_JUDUL, adopt.judul)
+            intent.putExtra(DetailAdopsi.EXTRA_HEWAN, adopt.jhewan)
+            intent.putExtra(DetailAdopsi.EXTRA_JENKEL, adopt.jkelamin)
+            intent.putExtra(DetailAdopsi.EXTRA_DESC, adopt.deskripsi)
+            holder.itemView.context.startActivity(intent)
+        }
 
     }
 }

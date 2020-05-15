@@ -4,5 +4,6 @@ data class Adopt (
     var jhewan: String = "",
     var jkelamin: String = "",
     var deskripsi: String= "",
-    var img: String = ""
+    var img: String = "",
+    var judul: String = ""
 )
