@@ -27,19 +27,25 @@ User dari aplikasi yang kami buat yaitu masyarakat.
 
 
 ## Use case diagram
-
+<img src = "images/usecasediagram.JPG" width="400">
 
 ## Use case description
-
+<img src = "images/usecasedesc1.JPG" width="400">
+<img src = "images/usecasedesc2.JPG" width="400">
+<img src = "images/usecasedesc3.JPG" width="400">
 
 ## Activity diagram
-
+<img src = "images/activitydiagram1.JPG" width="400">
+<img src = "images/activitydiagram2.JPG" width="400">
+<img src = "images/activitydiagram3.JPG" width="400">
+<img src = "images/activitydiagram4.JPG" width="400">
+<img src = "images/activitydiagram5.JPG" width="400">
 
 ## Gantt chart
 
 
 ## ERD
-
+<img src = "images/erd.JPG" width="500">
 
 ## Hasil implementasi perangkat lunak
 
