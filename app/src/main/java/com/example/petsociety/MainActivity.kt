@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var email: EditText
     private lateinit var password: EditText
     private lateinit var loading: ProgressBar
-    private lateinit var btnLogin: Button
+    val URL_Login = "https://ab6ff856.ngrok.io/rpl/login.php"
 
-    val URL_Login = "https://538b838b.ngrok.io/android_register_login/login.php"
+    private lateinit var btnLogin: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,11 +42,11 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val mEmail = this.email.text.toString().trim()
             val mPass = this.password.text.toString().trim()
-            val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
-            startActivity(MoveLogin)
+            //val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)
+            //startActivity(MoveLogin)
 
             if (!mEmail.isEmpty() && !mPass.isEmpty()) {
-                //login(mEmail, mPass)
+                login(mEmail, mPass)
             } else {
                 if(mEmail.isEmpty()) email.error = "Please Insert Email"
                 if(mPass.isEmpty()) password.error = "Please Insert Password"
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         loading.visibility = View.VISIBLE
         btnLogin.visibility = View.GONE
 
-        val stringRequest: StringRequest = object : StringRequest(Method.POST, URL_Login,
+        val stringRequest: StringRequest = object : StringRequest(Method.POST, URL.login,
             Response.Listener { response ->
                 try {
                     val jsonObject = JSONObject(response)
@@ -70,9 +70,9 @@ class MainActivity : AppCompatActivity() {
                             //val user: JSONObject = jsonObject.getJSONObject("user")
                             val userPref = getSharedPreferences("user", Context.MODE_PRIVATE)
                             val editor = userPref.edit()
-                            val name = `object`.getString("name").trim()
+                            val name = `object`.getString("username").trim()
                             val email = `object`.getString("email").trim()
-                            editor.putString("name", name)
+                            editor.putString("username", name)
                             editor.putString("email", email)
                             editor.apply()
                             val MoveLogin = Intent(this@MainActivity, ControllerFragment::class.java)

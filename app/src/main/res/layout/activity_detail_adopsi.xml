@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".DetailAdopsi">
 
     <ImageView
         android:id="@+id/img_item_adopsi"
@@ -81,16 +82,16 @@
             android:fontFamily="@font/roboto_regular"/>
 
         <Button
-            android:id="@+id/btn_galang"
-            android:layout_width="340dp"
+            android:id="@+id/btn_adopt"
+            android:layout_width="match_parent"
             android:layout_height="39dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom"
             android:background="@drawable/rounded_btn_red"
             android:text="Adopsi Sekarang"
-            android:layout_marginTop="138dp"
             android:textColor="#FFFF"
             android:textSize="24sp" />
 
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

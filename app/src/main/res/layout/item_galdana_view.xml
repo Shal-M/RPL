@@ -44,15 +44,6 @@
             android:fontFamily="@font/roboto_regular"
             android:layout_below="@id/tv_item_galdana" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/img_item_galdana"
-            android:layout_below="@id/tv_item_username"
-            android:layout_marginTop="30dp"/>
-
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

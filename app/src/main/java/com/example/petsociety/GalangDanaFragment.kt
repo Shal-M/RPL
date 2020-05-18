@@ -24,7 +24,7 @@ import java.lang.reflect.Method
  * A simple [Fragment] subclass.
  */
 class GalangDanaFragment : Fragment() {
-    val URL_DONASI = "https://538b838b.ngrok.io/android_register_login/readDonasi.php"
+    val URL_DONASI = "https://ab6ff856.ngrok.io/android_register_login/readDonasi.php"
     private val donasiList = arrayListOf<Donasi>()
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewManager: RecyclerView.LayoutManager

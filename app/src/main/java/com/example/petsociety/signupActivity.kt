@@ -55,13 +55,16 @@ class signupActivity : AppCompatActivity(){
         val mPassword = this.password.text.toString().trim()
 
         if (!mEmail.isEmpty() && !mUsername.isEmpty() && !mPassword.isEmpty()) {
-            val stringRequest: StringRequest = object : StringRequest(Method.POST, URL_REGIST,
+            val stringRequest: StringRequest = object : StringRequest(Method.POST, URL.register,
                 Response.Listener { response ->
                     try {
                         val jsonObject = JSONObject(response)
                         val success = jsonObject.getString("success")
                         if (success == "1") {
                             Toast.makeText(this, "Register Success!", Toast.LENGTH_SHORT).show()
+                            loading.visibility = View.GONE
+                            val intent = Intent(this@signupActivity, MainActivity::class.java)
+                            startActivity(intent)
                         }
                     } catch (e: JSONException) {
                         e.printStackTrace()
@@ -78,7 +81,7 @@ class signupActivity : AppCompatActivity(){
                 @Throws(AuthFailureError::class)
                 override fun getParams(): Map<String, String> {
                     val params: MutableMap<String, String> = HashMap()
-                    params["name"] = mUsername
+                    params["username"] = mUsername
                     params["email"] = mEmail
                     params["password"] = mPassword
                     return params

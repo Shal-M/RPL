@@ -6,28 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".PostAdopsiActivity"
     android:orientation="vertical">
-    <com.google.android.material.appbar.MaterialToolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="1dp"
-        app:title=" ">
-
-        <ImageButton
-            android:id="@+id/arrow_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_arrow_back_black_24dp"
-            android:background="@android:color/transparent"
-            android:layout_marginEnd="24dp"
-            android:tint="@android:color/black"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Post"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"/>
-
-    </com.google.android.material.appbar.MaterialToolbar>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -58,7 +36,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Judul"
+                android:text="@string/nama_hewan"
                 android:textSize="15sp"
                 android:layout_marginStart="10dp"
                 android:textColor="@android:color/black"
@@ -73,7 +51,7 @@
                 android:background="@drawable/txt_bg"
                 android:padding="8dp"
                 android:textSize="15sp"
-                android:hint="Judul Post"/>
+                android:hint="@string/nama_hewan"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -134,6 +112,26 @@
                 android:padding="8dp"
                 android:textSize="15sp"
                 android:hint="@string/deskripsi"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_telepon"
+                android:textSize="15sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/et_telp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="1dp"
+                android:inputType="text"
+                android:gravity="left"
+                android:background="@drawable/txt_bg"
+                android:padding="8dp"
+                android:textSize="15sp"
+                android:hint="@string/no_telepon"/>
             <Button
                 android:id="@+id/btn_post_adopsi"
                 android:layout_width="340dp"
@@ -147,6 +145,4 @@
                 />
         </LinearLayout>
     </ScrollView>
-
-
 </LinearLayout>

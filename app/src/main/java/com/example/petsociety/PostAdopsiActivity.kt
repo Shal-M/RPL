@@ -30,6 +30,8 @@ class PostAdopsiActivity() : AppCompatActivity() {
     private lateinit var mHewan: EditText
     private lateinit var mKelamin: EditText
     private lateinit var mDeskripsi: EditText
+    private lateinit var mTelp : EditText
+    private lateinit var mJenis : EditText
     private lateinit var decoded: Bitmap
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,11 +45,12 @@ class PostAdopsiActivity() : AppCompatActivity() {
 
         imageView = findViewById(R.id.img_post_adopsi)
         var addPhoto = findViewById<TextView>(R.id.tv_change_photo)
-        mHewan = findViewById(R.id.et_hewan)
+        mHewan = findViewById(R.id.et_judul)
         mKelamin = findViewById(R.id.et_kelamin)
         mDeskripsi = findViewById(R.id.et_deskripsi)
+        mTelp = findViewById(R.id.et_telp)
+        mJenis = findViewById(R.id.et_hewan)
         var post = findViewById<Button>(R.id.btn_post_adopsi)
-        var arrowBack = findViewById<ImageButton>(R.id.arrow_back)
 
         addPhoto.setOnClickListener {
             val intent = Intent()
@@ -57,10 +60,6 @@ class PostAdopsiActivity() : AppCompatActivity() {
         }
         post.setOnClickListener {
             UploadPicture()
-        }
-        arrowBack.setOnClickListener {
-            val moveBack = Intent(this, ControllerFragment::class.java)
-            startActivity(moveBack)
         }
     }
 
@@ -121,9 +120,11 @@ class PostAdopsiActivity() : AppCompatActivity() {
 
         val GetHewan = mHewan.text.toString().trim()
         val GetKelamin = mKelamin.text.toString().trim()
+        val GetTelp = mTelp.text.toString().trim()
+        val GetJenis = mJenis.text.toString().trim()
         val GetDesc = mDeskripsi.text.toString()
 
-        val stringRequest: StringRequest = object : StringRequest(Method.POST, URL_ADOPSI,
+        val stringRequest: StringRequest = object : StringRequest(Method.POST, URL.postAdopt,
             Response.Listener { response ->
                 progressDialog.dismiss()
                 Log.i(PostAdopsiActivity::class.java.simpleName, response.toString())
@@ -146,9 +147,11 @@ class PostAdopsiActivity() : AppCompatActivity() {
             @Throws(AuthFailureError::class)
             override fun getParams(): Map<String, String> {
                 val params: MutableMap<String, String> = HashMap()
-                params["jhewan"] = GetHewan
-                params["jkelamin"] = GetKelamin
-                params["deskripsi"] = GetDesc
+                params["nama_hewan"] = GetHewan
+                params["jenis_kelamin"] = GetKelamin
+                params["deskripsi_hewan"] = GetDesc
+                params["tipe_hewan"] = GetJenis
+                params["telp"] = GetTelp
                 params["image_hewan"] = Upload(decoded) as String
                 return params
             }

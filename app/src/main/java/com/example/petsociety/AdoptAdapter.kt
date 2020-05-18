@@ -15,10 +15,10 @@ import com.bumptech.glide.Glide
 class AdoptAdapter(private val context: Context, private val listAdopt: ArrayList<Adopt>): RecyclerView.Adapter<AdoptAdapter.AdoptViewHolder>() {
     inner class AdoptViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         var tvHewan = itemView.findViewById<TextView>(R.id.tv_item_adopsi)
-        var tvKel = itemView.findViewById<TextView>(R.id.tv_item_username)
+        var tvJenis = itemView.findViewById<TextView>(R.id.tv_item_username)
         var tvDesc = itemView.findViewById<TextView>(R.id.tv_desk_item)
         var img = itemView.findViewById<ImageView>(R.id.img_item_adopsi)
-        var tvjudul = itemView.findViewById<TextView>(R.id.et_judul)
+        //var tvjudul = itemView.findViewById<TextView>(R.id.et_judul)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdoptAdapter.AdoptViewHolder {
@@ -37,9 +37,9 @@ class AdoptAdapter(private val context: Context, private val listAdopt: ArrayLis
             .load(adopt.img)
             .into(holder.img)
 
-        holder.tvjudul.text = adopt.judul
+        //holder.tvjudul.text = adopt.judul
         holder.tvHewan.text = adopt.jhewan
-        holder.tvKel.text = adopt.jkelamin
+        holder.tvJenis.text = adopt.jkelamin
         holder.tvDesc.text = adopt.deskripsi
 
         holder.itemView.setOnClickListener {
@@ -50,6 +50,5 @@ class AdoptAdapter(private val context: Context, private val listAdopt: ArrayLis
             intent.putExtra(DetailAdopsi.EXTRA_DESC, adopt.deskripsi)
             holder.itemView.context.startActivity(intent)
         }
-
     }
 }

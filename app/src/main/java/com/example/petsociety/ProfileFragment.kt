@@ -36,7 +36,7 @@ class ProfileFragment : Fragment() {
         btnLogOut.setOnClickListener {
             //Log.d("username: ", mUsername)
         }
-        username.setText(sharedPreferences?.getString("name", ""))
+        username.setText(sharedPreferences?.getString("username", ""))
         email.setText(sharedPreferences?.getString("email",""))
 
         return view

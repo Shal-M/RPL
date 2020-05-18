@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".detailDonasi">
 
     <ImageView
         android:id="@+id/img_item_adopsi"
@@ -45,15 +46,6 @@
             android:textSize="40sp"
             android:textStyle="bold"
             android:fontFamily="@font/roboto_bold"/>
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/img_item_galdana"
-            android:layout_below="@id/tv_item_username"
-            android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/item_desk"

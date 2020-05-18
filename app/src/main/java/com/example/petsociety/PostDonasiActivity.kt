@@ -29,7 +29,7 @@ import java.io.IOException
 import java.util.*
 
 class PostDonasiActivity : AppCompatActivity() {
-    val URL_DONASI = "https://c4c0c92d.ngrok.io/android_register_login/uploadDonasi.php"
+    val URL_DONASI = "https://ab6ff856.ngrok.io/android_register_login/uploadDonasi.php"
     private lateinit var imageView: ImageView
     private lateinit var mJudul: EditText
     private lateinit var mDeskripsi: EditText

@@ -13,15 +13,19 @@ import com.android.volley.Request
 import com.android.volley.Request.Method.GET
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.google.firebase.analytics.FirebaseAnalytics.Event.LOGIN
+import org.json.JSONArray
 import org.json.JSONException
+import org.json.JSONObject
 import java.lang.reflect.Method
 
 /**
  * A simple [Fragment] subclass.
  */
 class AdopsiFragment : Fragment() {
-    val URL_ADOPT = "https://538b838b.ngrok.io/android_register_login/readAdopt.php"
+    val URL_ADOPT = "https://ab6ff856.ngrok.io/android_register_login/readAdopt.php"
     private val adoptList = arrayListOf<Adopt>()
     private lateinit var recyclerView: RecyclerView
     private lateinit var viewManager: RecyclerView.LayoutManager
@@ -38,30 +42,35 @@ class AdopsiFragment : Fragment() {
     }
 
     private fun loadAdopt() {
-        val requestQueue = Volley.newRequestQueue(activity)
-        val jsonArrayRequest = JsonArrayRequest(GET, URL_ADOPT,null,
+        val stringRequest: StringRequest = object : StringRequest(Method.POST, URL.readAdopt,
             Response.Listener {response ->
-                for(i in 0 until response.length()){
-                    try {
-                        val adoptObject = response.getJSONObject(i)
-                        val adopsi = Adopt()
-                        adopsi.jhewan = adoptObject.getString("jhewan").toString()
-                        adopsi.jkelamin = adoptObject.getString("jkelamin").toString()
-                        adopsi.deskripsi = adoptObject.getString("deskripsi").toString()
-                        adopsi.img = adoptObject.getString("image_hewan")
-                        adoptList.add(adopsi)
-                    }catch (e: JSONException){
-
+                try {
+                    val jsonArray = JSONArray(response)
+                    for(i in 0 until jsonArray.length()){
+                        val adopt = jsonArray.getJSONObject(i)
+                        adoptList.add(
+                            Adopt(
+                            adopt.getString("tipe_hewan"),
+                                adopt.getString("jenis_kelamin"),
+                                adopt.getString("deskripsi_hewan"),
+                                adopt.getString("image_hewan"),
+                                adopt.getString("nama_hewan"),
+                                adopt.getString("telp")
+                        ))
                     }
+                    recyclerView.layoutManager = LinearLayoutManager(activity)
+                    val adapter = activity?.let { AdoptAdapter(it, adoptList) }
+                    recyclerView.adapter = adapter
+                }catch (e: JSONException){
+                    e.printStackTrace()
                 }
-                recyclerView.layoutManager = LinearLayoutManager(activity)
-                val adapter = activity?.let { AdoptAdapter(it, adoptList) }
-                recyclerView.adapter = adapter
             },
             Response.ErrorListener {
                     error -> Log.d("tag", "onErrorResponse: " + error.message)
-            })
-        requestQueue.add(jsonArrayRequest)
+            }){
+
+        }
+        Volley.newRequestQueue(activity).add(stringRequest)
     }
 
 }

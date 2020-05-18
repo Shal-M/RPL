@@ -1,6 +1,8 @@
 package com.example.petsociety
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +17,7 @@ class DetailAdopsi : AppCompatActivity() {
         const val EXTRA_JENKEL = "extra_jenkel"
         const val EXTRA_HEWAN = "extra_hewan"
     }
+    private lateinit var pesan: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_adopsi)
@@ -24,6 +27,7 @@ class DetailAdopsi : AppCompatActivity() {
         val tvDesk : TextView = findViewById(R.id.item_desk)
         val tvJenkel : TextView = findViewById(R.id.jenis_kelamin_hewan)
         val tvHewan : TextView = findViewById(R.id.jenis_hewan)
+        val btn: Button = findViewById(R.id.btn_adopt)
 
         val judul = intent.getStringExtra(EXTRA_JUDUL)
         val img = intent.getStringExtra(EXTRA_PHOTO)
@@ -40,5 +44,14 @@ class DetailAdopsi : AppCompatActivity() {
             .load(img)
             .into(imgPhoto)
 
+        btn.setOnClickListener {
+            pesan = "Saya berniat Adopsi"
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.setType("text/plain")
+            intent.putExtra(Intent.EXTRA_TEXT, pesan)
+            intent.putExtra("jid", "6281319223640"+"@s.whatsapp.net")
+            intent.setPackage("com.whatsapp")
+            startActivity(intent)
+        }
     }
 }
