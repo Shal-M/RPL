@@ -31,7 +31,8 @@
             android:layout_toRightOf="@id/img_item_galdana"
             android:layout_marginTop="10dp"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_bold"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,6 +41,7 @@
             android:textSize="18sp"
             android:layout_toRightOf="@id/img_item_galdana"
             android:textColor="#FA1010"
+            android:fontFamily="@font/roboto_regular"
             android:layout_below="@id/tv_item_galdana" />
 
         <ProgressBar

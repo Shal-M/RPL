@@ -38,7 +38,8 @@
                 android:layout_toRightOf="@id/img_item_adopsi"
                 android:layout_marginTop="10dp"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_bold"/>
             <TextView
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
@@ -48,7 +49,8 @@
                 android:textSize="18sp"
                 android:layout_toRightOf="@id/img_item_adopsi"
                 android:textColor="#FA1010"
-                android:layout_below="@id/tv_item_adopsi" />
+                android:layout_below="@id/tv_item_adopsi"
+                android:fontFamily="@font/roboto_regular"/>
             <TextView
                 android:layout_marginLeft="10dp"
                 android:id="@+id/tv_desk_item"
@@ -60,7 +62,8 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="18sp"
                 android:layout_toRightOf="@id/img_item_adopsi"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"/>
             <Button
                 android:layout_width="100dp"
                 android:layout_height="30dp"

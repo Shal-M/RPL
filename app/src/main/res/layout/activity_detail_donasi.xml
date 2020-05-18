@@ -43,7 +43,8 @@
             android:layout_marginStart="10dp"
             android:text="@string/judul"
             android:textSize="40sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_bold"/>
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -61,7 +62,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:text="Deskripsi"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:fontFamily="@font/roboto_regular"/>
 
         <Button
             android:id="@+id/btn_galang_di_detail"
