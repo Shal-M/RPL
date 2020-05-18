@@ -39,10 +39,16 @@ class PostDonasiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_donasi)
 
+        val actionbar = supportActionBar
+        actionbar!!.title = "New Post"
+
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         imageView = findViewById(R.id.img_post_adopsi)
         mJudul = findViewById(R.id.et_judul)
         mDeskripsi = findViewById(R.id.et_deskripsi)
-        var arrowBack = findViewById<ImageButton>(R.id.arrow_back)
+
+        val arrowBack = findViewById<ImageButton>(R.id.arrow_back)
 
         tv_change_photo.setOnClickListener {
             val intent = Intent()
@@ -60,7 +66,10 @@ class PostDonasiActivity : AppCompatActivity() {
         }
     }
 
-
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 
     private fun UploadPicture() {
         val progressDialog = ProgressDialog(this)

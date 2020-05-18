@@ -36,6 +36,11 @@ class PostAdopsiActivity() : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_adopsi)
 
+        val actionbar = supportActionBar
+        actionbar!!.title = "New Post"
+
+        actionbar.setDisplayHomeAsUpEnabled(true)
+
         imageView = findViewById(R.id.img_post_adopsi)
         var addPhoto = findViewById<TextView>(R.id.tv_change_photo)
         mHewan = findViewById(R.id.et_hewan)
@@ -57,6 +62,11 @@ class PostAdopsiActivity() : AppCompatActivity() {
             val moveBack = Intent(this, ControllerFragment::class.java)
             startActivity(moveBack)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun Upload(bmp: Bitmap): Any {

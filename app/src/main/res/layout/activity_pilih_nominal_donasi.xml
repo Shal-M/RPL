@@ -39,11 +39,15 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="11dp"
                         android:text="RP 10.000"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
@@ -51,8 +55,8 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="220dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginStart="210dp"
                         android:src="@drawable/ic_chevron_right_gray_24dp"/>
 
                 </LinearLayout>
@@ -75,12 +79,15 @@
             android:layout_margin="20dp"
             android:background="@drawable/bg_nominal_donasi"
             android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="11dp"
                 android:text="RP 20.000"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
@@ -89,7 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="220dp"
+                android:layout_marginStart="210dp"
                 android:src="@drawable/ic_chevron_right_gray_24dp"/>
 
         </LinearLayout>
@@ -101,38 +108,16 @@
             android:layout_margin="20dp"
             android:background="@drawable/bg_nominal_donasi"
             android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="11dp"
                 android:text="RP 50.000"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="220dp"
-                android:src="@drawable/ic_chevron_right_gray_24dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/nom_100k"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="20dp"
-            android:background="@drawable/bg_nominal_donasi"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:text="RP 100.000"
                 android:textColor="@android:color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -143,6 +128,43 @@
                 android:layout_marginStart="210dp"
                 android:src="@drawable/ic_chevron_right_gray_24dp"/>
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nom_100k"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_nominal_donasi"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="RP 100.000"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="200dp"
+                android:src="@drawable/ic_chevron_right_gray_24dp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_bayar"
+            android:layout_width="340dp"
+            android:layout_height="39dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_btn_red"
+            android:text="Donasi Sekarang"
+            android:textColor="#FFFF"
+            android:textSize="22sp" />
 
 
 
