@@ -12,7 +12,7 @@ class DetailAdopsi : AppCompatActivity() {
     companion object{
         const val EXTRA_JUDUL = "extra_judul"
         const val EXTRA_DESC = "extra_desc"
-        const val EXTRA_TEMPAT = "extra_tempat"
+        const val EXTRA_TELP = "extra_telp"
         const val EXTRA_PHOTO = "extra_photo"
         const val EXTRA_JENKEL = "extra_jenkel"
         const val EXTRA_HEWAN = "extra_hewan"
@@ -34,6 +34,7 @@ class DetailAdopsi : AppCompatActivity() {
         val desk = intent.getStringExtra(EXTRA_DESC)
         val hewan = intent.getStringExtra(EXTRA_HEWAN)
         val jenKel = intent.getStringExtra(EXTRA_JENKEL)
+        val telp = intent.getStringExtra(EXTRA_TELP)
 
         tvJudul.text=judul
         tvHewan.text=hewan
@@ -49,7 +50,7 @@ class DetailAdopsi : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_SEND)
             intent.setType("text/plain")
             intent.putExtra(Intent.EXTRA_TEXT, pesan)
-            intent.putExtra("jid", "6281319223640"+"@s.whatsapp.net")
+            intent.putExtra("jid", "62"+telp+"@s.whatsapp.net")
             intent.setPackage("com.whatsapp")
             startActivity(intent)
         }

@@ -48,7 +48,6 @@ class PostDonasiActivity : AppCompatActivity() {
         mJudul = findViewById(R.id.et_judul)
         mDeskripsi = findViewById(R.id.et_deskripsi)
 
-        val arrowBack = findViewById<ImageButton>(R.id.arrow_back)
 
         tv_change_photo.setOnClickListener {
             val intent = Intent()
@@ -59,10 +58,6 @@ class PostDonasiActivity : AppCompatActivity() {
 
         btn_post_adopsi.setOnClickListener {
             UploadPicture()
-        }
-        arrowBack.setOnClickListener {
-            val moveBack = Intent(this, ControllerFragment::class.java)
-            startActivity(moveBack)
         }
     }
 
@@ -79,7 +74,7 @@ class PostDonasiActivity : AppCompatActivity() {
         val GetJudul = mJudul.text.toString().trim()
         val GetDesc = mDeskripsi.text.toString()
 
-        val stringRequest: StringRequest = object : StringRequest(Method.POST, URL_DONASI,
+        val stringRequest: StringRequest = object : StringRequest(Method.POST, URL.postDonasi,
             Response.Listener {response ->
                 progressDialog.dismiss()
                 Log.i(PostDonasiActivity::class.java.simpleName, response.toString())
@@ -88,11 +83,13 @@ class PostDonasiActivity : AppCompatActivity() {
                     val success = jsonObject.getString("success")
                     if(success == "1"){
                         Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
+                        //val intent = Intent(this@PostDonasiActivity, HomeFragment::class.java)
+                        //startActivity(intent)
                     }
                 }catch (e: JSONException){
                     e.printStackTrace()
                     progressDialog.dismiss()
-                    Toast.makeText(this,"Try Again"+e, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Try Again "+e, Toast.LENGTH_SHORT).show()
                 }
         },
             Response.ErrorListener { error ->

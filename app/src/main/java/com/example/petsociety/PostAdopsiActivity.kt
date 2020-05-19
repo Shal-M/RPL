@@ -120,7 +120,7 @@ class PostAdopsiActivity() : AppCompatActivity() {
 
         val GetHewan = mHewan.text.toString().trim()
         val GetKelamin = mKelamin.text.toString().trim()
-        val GetTelp = mTelp.text.toString().trim()
+        val GetTelp = mTelp.text.toString()
         val GetJenis = mJenis.text.toString().trim()
         val GetDesc = mDeskripsi.text.toString()
 
@@ -133,6 +133,8 @@ class PostAdopsiActivity() : AppCompatActivity() {
                     val success = jsonObject.getString("success")
                     if(success == "1"){
                         Toast.makeText(this,"Success", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@PostAdopsiActivity, HomeFragment::class.java)
+                        startActivity(intent)
                     }
                 } catch (e: JSONException) {
                         e.printStackTrace()
@@ -147,12 +149,12 @@ class PostAdopsiActivity() : AppCompatActivity() {
             @Throws(AuthFailureError::class)
             override fun getParams(): Map<String, String> {
                 val params: MutableMap<String, String> = HashMap()
-                params["nama_hewan"] = GetHewan
-                params["jenis_kelamin"] = GetKelamin
-                params["deskripsi_hewan"] = GetDesc
-                params["tipe_hewan"] = GetJenis
+                params["nama"] = GetHewan
+                params["kelamin"] = GetKelamin
+                params["deskripsi"] = GetDesc
+                params["jenis_hewan"] = GetJenis
                 params["telp"] = GetTelp
-                params["image_hewan"] = Upload(decoded) as String
+                params["image"] = Upload(decoded) as String
                 return params
             }
         }

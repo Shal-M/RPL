@@ -31,4 +31,6 @@
     <string name="judul">Judul</string>
     <string name="nama_hewan">Nama Hewan</string>
     <string name="no_telepon">No.Telepon</string>
+    <string name="change_picture">change picture</string>
+    <string name="_62">+62</string>
 </resources>

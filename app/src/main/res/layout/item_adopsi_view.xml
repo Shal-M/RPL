@@ -64,16 +64,6 @@
                 android:layout_toRightOf="@id/img_item_adopsi"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/roboto_regular"/>
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:background="@drawable/rounded_btn_red"
-                android:text="Detail"
-                android:textColor="#FFFF"
-                android:layout_below="@id/tv_desk_item"
-                android:layout_toEndOf="@id/tv_desk_item"
-                android:layout_marginLeft="65dp"
-                android:layout_marginTop="30dp"/>
 
         </RelativeLayout>
 

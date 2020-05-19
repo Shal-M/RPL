@@ -16,13 +16,6 @@ class EditProfilActivity : AppCompatActivity() {
 
         actionbar.setDisplayHomeAsUpEnabled(true)
 
-
-        var arrowBack = findViewById<ImageButton>(R.id.arrow_back)
-
-        arrowBack.setOnClickListener {
-            val moveBack = Intent(this, ProfileFragment::class.java)
-            startActivity(moveBack)
-        }
     }
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()

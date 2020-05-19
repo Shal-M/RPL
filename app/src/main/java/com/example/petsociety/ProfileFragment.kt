@@ -34,7 +34,11 @@ class ProfileFragment : Fragment() {
         //val mUsername = arguments?.getString("name").toString()
         //val mEmail = arguments?.getString("email").toString()
         btnLogOut.setOnClickListener {
-            //Log.d("username: ", mUsername)
+            activity?.let{
+                val intent = Intent(it, MainActivity::class.java)
+                startActivity(intent)
+            }
+
         }
         username.setText(sharedPreferences?.getString("username", ""))
         email.setText(sharedPreferences?.getString("email",""))

@@ -50,12 +50,12 @@ class AdopsiFragment : Fragment() {
                         val adopt = jsonArray.getJSONObject(i)
                         adoptList.add(
                             Adopt(
-                            adopt.getString("tipe_hewan"),
-                                adopt.getString("jenis_kelamin"),
-                                adopt.getString("deskripsi_hewan"),
-                                adopt.getString("image_hewan"),
-                                adopt.getString("nama_hewan"),
-                                adopt.getString("telp")
+                            adopt.getString("nama"),
+                                adopt.getString("jenis_hewan"),
+                                adopt.getString("kelamin"),
+                                adopt.getString("deskripsi"),
+                                adopt.getString("telp"),
+                                adopt.getString("image")
                         ))
                     }
                     recyclerView.layoutManager = LinearLayoutManager(activity)
@@ -72,5 +72,4 @@ class AdopsiFragment : Fragment() {
         }
         Volley.newRequestQueue(activity).add(stringRequest)
     }
-
 }

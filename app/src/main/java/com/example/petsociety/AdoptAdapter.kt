@@ -34,20 +34,22 @@ class AdoptAdapter(private val context: Context, private val listAdopt: ArrayLis
         val adopt = listAdopt[position]
 
         Glide.with(holder.itemView.context)
-            .load(adopt.img)
+            .load(adopt.image)
             .into(holder.img)
 
         //holder.tvjudul.text = adopt.judul
-        holder.tvHewan.text = adopt.jhewan
+        holder.tvHewan.text = adopt.nama
         holder.tvJenis.text = adopt.jkelamin
         holder.tvDesc.text = adopt.deskripsi
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, DetailAdopsi::class.java)
-            intent.putExtra(DetailAdopsi.EXTRA_JUDUL, adopt.judul)
+            intent.putExtra(DetailAdopsi.EXTRA_PHOTO, adopt.image)
+            intent.putExtra(DetailAdopsi.EXTRA_JUDUL, adopt.nama)
             intent.putExtra(DetailAdopsi.EXTRA_HEWAN, adopt.jhewan)
             intent.putExtra(DetailAdopsi.EXTRA_JENKEL, adopt.jkelamin)
             intent.putExtra(DetailAdopsi.EXTRA_DESC, adopt.deskripsi)
+            intent.putExtra(DetailAdopsi.EXTRA_TELP, adopt.telp)
             holder.itemView.context.startActivity(intent)
         }
     }

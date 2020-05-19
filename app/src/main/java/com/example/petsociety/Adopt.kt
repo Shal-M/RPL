@@ -1,10 +1,10 @@
 package com.example.petsociety
 
 data class Adopt (
+    var nama: String = "",
     var jhewan: String = "",
-    var jkelamin: String = "",
-    var deskripsi: String= "",
-    var img: String = "",
-    var judul: String = "",
-    var telp: String = ""
+    var jkelamin: String= "",
+    var deskripsi: String = "",
+    var telp: String = "",
+    var image: String = ""
 )
