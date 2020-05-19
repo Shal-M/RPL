@@ -1,7 +1,7 @@
 package com.example.petsociety
 
 object URL {
-    val url = "https://add57e81.ngrok.io/rpl/"
+    val url = "https://b0b309bc.ngrok.io/rpl/"
     val login = url + "login.php"
     val register = url + "register.php"
     val postAdopt = url + "uploadAdopt.php"

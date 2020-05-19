@@ -42,7 +42,7 @@ class DonasiAdapter(private val context: Context, private val listDonasi:ArrayLi
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, detailDonasi::class.java)
             intent.putExtra(detailDonasi.EXTRA_JUDUL, donasi.judul)
-            //intent.putExtra(detailDonasi.EXTRA_DESC, donasi.desc)
+            intent.putExtra(detailDonasi.EXTRA_DESC, donasi.desc)
             intent.putExtra(detailDonasi.EXTRA_PHOTO, donasi.photo)
             holder.itemView.context.startActivity(intent)
         }

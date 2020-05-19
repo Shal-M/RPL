@@ -83,8 +83,8 @@ class PostDonasiActivity : AppCompatActivity() {
                     val success = jsonObject.getString("success")
                     if(success == "1"){
                         Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
-                        //val intent = Intent(this@PostDonasiActivity, HomeFragment::class.java)
-                        //startActivity(intent)
+                        val intent = Intent(this@PostDonasiActivity, HomeFragment::class.java)
+                        startActivity(intent)
                     }
                 }catch (e: JSONException){
                     e.printStackTrace()
