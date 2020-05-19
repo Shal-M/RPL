@@ -20,9 +20,14 @@ Aplikasi ini kami rencanakan belum dapat memproses pembayaran via bank, dan user
 Aplikasi ini seperti hal nya pet shop, ada penitipan hewan, jual beli hewan, perkawinan antar hewan, dan jual beli makanan hewan. Segala hal tersebut berada dalam satu marketplace dengan kategori-kategori yang berbeda.
 
 ## Analisis user (user profile)
-User dari aplikasi yang kami buat yaitu masyarakat.
+User dari aplikasi yang kami buat yaitu masyarakat, siapa pun bisa menggunakan aplikasi ini.
 
 ## User story
+- Sebagai masyarakat saya dapat memposting data mengenai hewan untuk diadopsi
+- Sebagai masyarakat saya dapat melihat data hewan yang akan diadopsi
+- Sebagai masyarakat saya dapat mendonasikan dana untuk hewan peliharaan yang sakit
+- Sebagai masyarakat saya dapat memposting data hewan yang sakit untuk penggalangan dana
+- Sebagai masyarakat saya dapat chatting dengan user lainnya untuk keperluan adopsi
 
 
 ## Use case diagram
