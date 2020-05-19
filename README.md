@@ -14,12 +14,11 @@ Seringkali kita melihat hewan terlantar atau tak terawat. Ada juga kasus yaitu s
 Mempermudah pemelihara hewan untuk mengadopsi hewannya dan membantu keselamatan hewan-hewan yang sakit atau terawat serta diambang kepunahan.
 
 ## Ruang Lingkup
-Aplikasi ini kami rencanakan belum dapat memproses pembayaran via bank, dan user belum dapat melakukan obrolan langsung dengan penjual.
 Ruang lingkup aplikasi ini :
-1. Aplikasi fundrising khusus untuk hewan
-- Aplikasi untuk memberi bantuan dana kepada hewan yang sakit atau hal lainnya yang perlu dibantu.
-2. Aplikasi adopsi hewan
-- Aplikasi untuk adopsi hewan agar meminimalisir hewan tak terurus.
+* Aplikasi fundrising khusus untuk hewan
+  + Aplikasi untuk memberi bantuan dana kepada hewan yang sakit atau hal lainnya yang perlu dibantu.
+* Aplikasi adopsi hewan
+  + Aplikasi untuk adopsi hewan agar meminimalisir hewan tak terurus.
 
 ## Deskripsi perangkat lunak
 Aplikasi ini mempunyai 2 fitur utama yaitu donasi dan adopsi. Semua orang dapat menggunakan aplikasi ini. Donasi hewan dapat dilakukan jika
