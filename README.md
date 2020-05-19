@@ -8,7 +8,7 @@ Nama Anggota Kelompok :
 
 ## Latar Belakang
 
-Seringkali kita melihat hewan terlantar atau tak terawat.  Ada juga kasus yaitu seseorang yang memelihara hewan tetapi dia memiliki kendala seperti biaya sehingga tidak dapat merawat hewannya lagi. Atau kasus lainnya seperti hewan-hewan yang semakin hari semakin langka akibat ulah tangan-tangan yang tidak bertanggung jawab.
+Seringkali kita melihat hewan terlantar atau tak terawat. Ada juga kasus yaitu seseorang yang memelihara hewan tetapi dia memiliki kendala seperti biaya sehingga tidak dapat merawat hewannya lagi. Atau kasus lainnya seperti hewan-hewan yang semakin hari semakin langka akibat ulah tangan-tangan yang tidak bertanggung jawab. 
 Melihat permasalahan tersebut, kami sebagai mahasiswa ilmu komputer ingin membantu menangani masalah-masalah. Kami akan membuat aplikasi dengan fitur utama yaitu donasi dan adopsi.
 
 ## Tujuan
@@ -42,10 +42,22 @@ User dari aplikasi yang kami buat yaitu masyarakat.
 <img src = "images/activitydiagram5.JPG" width="400">
 
 ## Gantt chart
-
+<img src = "images/ganttchart.JPG" width="600">
 
 ## ERD
 <img src = "images/erd.JPG" width="500">
 
 ## Hasil implementasi perangkat lunak
+<img src = "images/ss1.JPG" width="200">
+<img src = "images/ss2.JPG" width="200">
+<img src = "images/ss3.jpg" width="200">
+<img src = "images/ss4.jpg" width="200">
+<img src = "images/ss5.jpg" width="200">
+<img src = "images/ss6.jpg" width="200">
+<img src = "images/ss7.jpg" width="200">
+<img src = "images/ss8.jpg" width="200">
+<img src = "images/ss9.jpg" width="200">
+<img src = "images/ss10.jpg" width="200">
+<img src = "images/ss11.jpg" width="200">
+<img src = "images/ss12.jpg" width="200">
 
