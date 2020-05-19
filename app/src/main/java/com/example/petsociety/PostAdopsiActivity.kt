@@ -132,9 +132,9 @@ class PostAdopsiActivity() : AppCompatActivity() {
                     val jsonObject = JSONObject(response)
                     val success = jsonObject.getString("success")
                     if(success == "1"){
-                        Toast.makeText(this,"Success", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@PostAdopsiActivity, HomeFragment::class.java)
                         startActivity(intent)
+                        Toast.makeText(this,"Success", Toast.LENGTH_SHORT).show()
                     }
                 } catch (e: JSONException) {
                         e.printStackTrace()
