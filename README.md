@@ -15,9 +15,16 @@ Mempermudah pemelihara hewan untuk mengadopsi hewannya dan membantu keselamatan 
 
 ## Ruang Lingkup
 Aplikasi ini kami rencanakan belum dapat memproses pembayaran via bank, dan user belum dapat melakukan obrolan langsung dengan penjual.
+Ruang lingkup aplikasi ini :
+1. Aplikasi fundrising khusus untuk hewan
+- Aplikasi untuk memberi bantuan dana kepada hewan yang sakit atau hal lainnya yang perlu dibantu.
+2. Aplikasi adopsi hewan
+- Aplikasi untuk adopsi hewan agar meminimalisir hewan tak terurus.
 
 ## Deskripsi perangkat lunak
-Aplikasi ini seperti hal nya pet shop, ada penitipan hewan, jual beli hewan, perkawinan antar hewan, dan jual beli makanan hewan. Segala hal tersebut berada dalam satu marketplace dengan kategori-kategori yang berbeda.
+Aplikasi ini mempunyai 2 fitur utama yaitu donasi dan adopsi. Semua orang dapat menggunakan aplikasi ini. Donasi hewan dapat dilakukan jika
+
+
 
 ## Analisis user (user profile)
 User dari aplikasi yang kami buat yaitu masyarakat, siapa pun bisa menggunakan aplikasi ini.
@@ -25,7 +32,7 @@ User dari aplikasi yang kami buat yaitu masyarakat, siapa pun bisa menggunakan a
 ## User story
 - Sebagai masyarakat saya dapat memposting data mengenai hewan untuk diadopsi
 - Sebagai masyarakat saya dapat melihat data hewan yang akan diadopsi
-- Sebagai masyarakat saya dapat mendonasikan dana untuk hewan peliharaan yang sakit
+- Sebagai masyarakat saya dapat mendonasikan dana untuk hewan yang perlu ditolong
 - Sebagai masyarakat saya dapat memposting data hewan yang sakit untuk penggalangan dana
 - Sebagai masyarakat saya dapat chatting dengan user lainnya untuk keperluan adopsi
 
