@@ -21,8 +21,7 @@ Ruang lingkup aplikasi ini :
   + Aplikasi untuk adopsi hewan agar meminimalisir hewan tak terurus.
 
 ## Deskripsi perangkat lunak
-Aplikasi ini mempunyai 2 fitur utama yaitu donasi dan adopsi. Semua orang dapat menggunakan aplikasi ini. Donasi hewan dapat dilakukan jika
-
+Aplikasi ini mempunyai 2 fitur utama yaitu donasi dan adopsi. Semua orang dapat menggunakan aplikasi ini. Fitur donasi bisa digunakan untuk berdonasi ataupun mencari dana. Berdonasi dapat dilakukan jika ada orang yang sudah memposting kebutuhan dana dan mencari dana dapat dilakukan dengan melengkapi data yang diminta oleh aplikasi, sama halnya dengan fitur adopsi.
 
 
 ## Analisis user (user profile)
@@ -69,5 +68,4 @@ User dari aplikasi yang kami buat yaitu masyarakat, siapa pun bisa menggunakan a
 <img src = "images/ss9.jpg" width="200">
 <img src = "images/ss10.jpg" width="200">
 <img src = "images/ss11.jpg" width="200">
-<img src = "images/ss12.jpg" width="200">
 
