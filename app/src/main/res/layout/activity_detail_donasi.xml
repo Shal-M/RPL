@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:text="@string/judul"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:fontFamily="@font/roboto_bold"/>
 
@@ -64,7 +64,7 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/rounded_btn_red"
             android:text="Donasi Sekarang"
-            android:layout_marginTop="138dp"
+            android:layout_marginTop="20dp"
             android:textColor="#FFFF"
             android:textSize="24sp" />
 
