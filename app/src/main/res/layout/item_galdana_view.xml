@@ -38,9 +38,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/tv_item_username"
             android:text="Username"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:layout_toRightOf="@id/img_item_galdana"
-            android:textColor="#FA1010"
             android:fontFamily="@font/roboto_regular"
             android:layout_below="@id/tv_item_galdana" />
 
