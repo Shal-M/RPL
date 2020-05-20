@@ -6,14 +6,23 @@
     tools:context=".InboxFragment">
 
     <!-- TODO: Update blank fragment layout -->
+   <ImageView
+       android:id="@+id/logo_inbox"
+       android:layout_width="100dp"
+       android:layout_height="80dp"
+       android:src="@drawable/logokucing"
+       android:layout_centerHorizontal="true"
+       android:layout_centerInParent="true"/>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Inbox Fragment"
-        android:layout_centerInParent="true"
+        android:text="Coming Soon..."
+        android:textSize="25sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/ptsans"
+        android:layout_below="@id/logo_inbox"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_blue_dark"/>
+        android:textStyle="bold"/>
+
 
 </RelativeLayout>
