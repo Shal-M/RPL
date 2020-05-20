@@ -48,7 +48,7 @@
                 android:text="Irsyadime"
                 android:textSize="18sp"
                 android:layout_toRightOf="@id/img_item_adopsi"
-                android:textColor="#FA1010"
+                android:textColor="#FFB8B8"
                 android:layout_below="@id/tv_item_adopsi"
                 android:fontFamily="@font/roboto_regular"/>
             <TextView
