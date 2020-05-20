@@ -37,6 +37,7 @@ User dari aplikasi yang kami buat yaitu masyarakat, siapa pun bisa menggunakan a
 
 ## Use case diagram
 <img src = "images/usecasediagram.JPG" width="400">
+*note : Chat akan terhubung dengan whatsapp
 
 ## Use case description
 <img src = "images/usecasedesc1.JPG" width="400">
@@ -66,6 +67,6 @@ User dari aplikasi yang kami buat yaitu masyarakat, siapa pun bisa menggunakan a
 <img src = "images/ss7.jpg" width="200">
 <img src = "images/ss8.jpg" width="200">
 <img src = "images/ss9.jpg" width="200">
-<img src = "images/ss10.jpg" width="200">
+<img src = "images/ss10.jpg" width="200"> 
 <img src = "images/ss11.jpg" width="200">
 
