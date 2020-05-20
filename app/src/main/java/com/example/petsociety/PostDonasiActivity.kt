@@ -82,16 +82,16 @@ class PostDonasiActivity : AppCompatActivity() {
                     val jsonObject = JSONObject(response)
                     val success = jsonObject.getString("success")
                     if(success == "1"){
-                        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@PostDonasiActivity, HomeFragment::class.java)
                         startActivity(intent)
+                        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
                     }
                 }catch (e: JSONException){
                     e.printStackTrace()
                     progressDialog.dismiss()
                     Toast.makeText(this,"Try Again "+e, Toast.LENGTH_SHORT).show()
                 }
-        },
+            },
             Response.ErrorListener { error ->
                 progressDialog.dismiss()
                 Toast.makeText(this, "Try Again"+ error.toString(), Toast.LENGTH_SHORT).show()

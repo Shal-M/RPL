@@ -8,22 +8,31 @@ Nama Anggota Kelompok :
 
 ## Latar Belakang
 
-Seringkali kita melihat hewan terlantar atau tak terawat.  Ada juga kasus yaitu seseorang yang memelihara hewan tetapi dia memiliki kendala seperti biaya sehingga tidak dapat merawat hewannya lagi. Atau kasus lainnya seperti hewan-hewan yang semakin hari semakin langka akibat ulah tangan-tangan yang tidak bertanggung jawab.
-Melihat permasalahan tersebut, kami sebagai mahasiswa ilmu komputer ingin membantu menangani masalah-masalah. Kami akan membuat aplikasi dengan fitur utama yaitu donasi dan adopsi.
+Seringkali kita melihat hewan terlantar atau tak terawat. Ada juga kasus yaitu seseorang yang memelihara hewan tetapi dia memiliki kendala seperti biaya sehingga tidak dapat merawat hewannya lagi. Akhirnya hewan yang ia pelihara ia terlantarkan begitu saja. Atau kasus lainnya seperti hewan-hewan yang semakin hari semakin langka akibat ulah tangan-tangan yang tidak bertanggung jawab. Sudah sepatutnya kita sebagai manusia juga peduli terhadap makhluk hidup lainnya. Oleh karena itu, kami sebagai mahasiswa ilmu komputer ingin membantu menangani masalah tersesebut dengan membuat aplikasi dengan fitur utama yaitu donasi dan adopsi.
 
 ## Tujuan
-Mempermudah pemelihara hewan untuk mengadopsi hewannya dan membantu keselamatan hewan-hewan yang diambang kepunahan.
+Mempermudah pemelihara hewan untuk mengadopsi hewannya dan membantu keselamatan hewan-hewan yang sakit atau terawat serta diambang kepunahan.
 
 ## Ruang Lingkup
-Aplikasi ini kami rencanakan belum dapat memproses pembayaran via bank, dan user belum dapat melakukan obrolan langsung dengan penjual.
+Ruang lingkup aplikasi ini :
+* Aplikasi fundrising khusus untuk hewan
+  + Aplikasi untuk memberi bantuan dana kepada hewan yang sakit atau hal lainnya yang perlu dibantu.
+* Aplikasi adopsi hewan
+  + Aplikasi untuk adopsi hewan agar meminimalisir hewan tak terurus.
 
 ## Deskripsi perangkat lunak
-Aplikasi ini seperti hal nya pet shop, ada penitipan hewan, jual beli hewan, perkawinan antar hewan, dan jual beli makanan hewan. Segala hal tersebut berada dalam satu marketplace dengan kategori-kategori yang berbeda.
+Aplikasi ini mempunyai 2 fitur utama yaitu donasi dan adopsi. Semua orang dapat menggunakan aplikasi ini. Fitur donasi bisa digunakan untuk berdonasi ataupun mencari dana. Berdonasi dapat dilakukan jika ada orang yang sudah memposting kebutuhan dana dan mencari dana dapat dilakukan dengan melengkapi data yang diminta oleh aplikasi, sama halnya dengan fitur adopsi.
+
 
 ## Analisis user (user profile)
-User dari aplikasi yang kami buat yaitu masyarakat.
+User dari aplikasi yang kami buat yaitu masyarakat, siapa pun bisa menggunakan aplikasi ini.
 
 ## User story
+- Sebagai masyarakat saya dapat memposting data mengenai hewan untuk diadopsi
+- Sebagai masyarakat saya dapat melihat data hewan yang akan diadopsi
+- Sebagai masyarakat saya dapat mendonasikan dana untuk hewan yang perlu ditolong
+- Sebagai masyarakat saya dapat memposting data hewan yang sakit untuk penggalangan dana
+- Sebagai masyarakat saya dapat chatting dengan user lainnya untuk keperluan adopsi
 
 
 ## Use case diagram
@@ -42,10 +51,21 @@ User dari aplikasi yang kami buat yaitu masyarakat.
 <img src = "images/activitydiagram5.JPG" width="400">
 
 ## Gantt chart
-
+<img src = "images/ganttchart.JPG" width="600">
 
 ## ERD
 <img src = "images/erd.JPG" width="500">
 
 ## Hasil implementasi perangkat lunak
+<img src = "images/ss1.JPG" width="200">
+<img src = "images/ss2.JPG" width="200">
+<img src = "images/ss3.jpg" width="200">
+<img src = "images/ss4.jpg" width="200">
+<img src = "images/ss5.jpg" width="200">
+<img src = "images/ss6.jpg" width="200">
+<img src = "images/ss7.jpg" width="200">
+<img src = "images/ss8.jpg" width="200">
+<img src = "images/ss9.jpg" width="200">
+<img src = "images/ss10.jpg" width="200">
+<img src = "images/ss11.jpg" width="200">
 
